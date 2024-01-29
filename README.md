@@ -10,6 +10,7 @@
 
 - https://toolness.github.io/p5.js-widget/
 - https://stackoverflow.com/questions/5626195/minimize-html-page-load-time-if-it-contains-image-icons - hack image load time using CSS sprite
+- https://api.jquery.com/resize/ - use for resizing p5.js?
 
 
 ### Further Thoughts
