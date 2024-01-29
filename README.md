@@ -9,3 +9,9 @@
 ### Resource
 
 - https://toolness.github.io/p5.js-widget/
+- https://stackoverflow.com/questions/5626195/minimize-html-page-load-time-if-it-contains-image-icons - hack image load time using CSS sprite
+
+
+### Further Thoughts
+
+- Tried importing HTML files into the main, index.html however it seems this might not be supported on all types of browser at the present moment
