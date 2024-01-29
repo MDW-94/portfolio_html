@@ -44,7 +44,7 @@ body, html {
     scroll-behavior: smooth;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
-    
+
 }
 
 
@@ -61,6 +61,7 @@ section {
 
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -70,18 +71,19 @@ section {
     border: 4px solid black;
 }
 
-.first_page {
+#first {
     background-color: #ff7f50;
+    font-size: larger;
 }
 
-.second_page {
+#second {
     background-color: #f0ffff;
 }
 
-.third_page {
+#third {
     background-color: #008080;
 }
 
-.fourth_page {
+#fourth {
     background-color: #ffc0cb;
 }
