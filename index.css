@@ -33,6 +33,8 @@ body, html {
 
     display: flex;
     place-items: center;
+
+    background-color: whitesmoke;
 }
 
 #root {
@@ -68,23 +70,18 @@ section {
     border: 4px solid black;
 }
 
-.Landing_page {
-    text-align: center;
-    background-color: coral;
+.first_page {
+    background-color: #ff7f50;
 }
 
 .second_page {
-    background-color: azure;
+    background-color: #f0ffff;
 }
 
 .third_page {
-    background-color: teal;
+    background-color: #008080;
 }
 
 .fourth_page {
-    background-color: pink;
-}
-
-.fifth_page{
-  background-color: moccasin;
+    background-color: #ffc0cb;
 }
