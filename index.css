@@ -113,7 +113,12 @@ a {
 }
 
 #about, #projects, #contact {
-    font-size: 16px;
+    font-size: 24px;
     gap: 16px;
+
+    @media screen and (max-width: 760px){
+        font-size: 16px;
+
+    }
 }
 

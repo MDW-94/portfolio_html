@@ -12,7 +12,22 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="script.js">
+            $(document).ready(function(){
+                $("a").on('click', function(event){
+                    if(this.hash !== "") {
+                    event.preventDefault();
+                    let hash = this.hash;
+
+                    $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                    }, 900, function(){
+                    window.location.hash = hash;
+                    });
+                }
+                });
+            });
+        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
         
@@ -26,9 +41,9 @@
             <section id="first_pg">
                 <p>Matthew's Portfolio</p>
                     <div class="smooth_scroll_main">
-                        <a href="#second" id='about'>About</a>
-                        <a href="#third" id='projects'>Projects</a>
-                        <a href="#fourth" id='contact'>Contact</a>
+                        <a href="#second_pg" id='about'>About</a>
+                        <a href="#third_pg" id='projects'>Projects</a>
+                        <a href="#fourth_pg" id='contact'>Contact</a>
                     </div>
             </section>
             <section id="second_pg">
