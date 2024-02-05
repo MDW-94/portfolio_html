@@ -29,7 +29,7 @@ body,
   font-size: 16px;
   /* color: whitesmoke; */
 
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body,
@@ -43,6 +43,17 @@ html {
 }
 
 #root {
+  /* background-image: url('./bg1.png'); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.814) 2.5%,
+      rgba(0, 128, 128, 0.361) 100%
+    ),
+    url("./bg1.png");
+
+  /* background-image: linear-gradient(
+    rgba(0, 0, 0, 0), 
+    teal); */
   position: absolute;
   overflow: scroll;
   scroll-behavior: smooth;
@@ -73,13 +84,24 @@ section {
   scroll-snap-align: center;
 
   box-sizing: border-box;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 32px;
+  color: whitesmoke;
 }
 
 #first_pg {
-  background-color: rgb(255, 127, 80, 0.85);
-  font-size: 32px;
+  /* background-color: rgb(255, 127, 80, 0.85); */
+  /* background-color: rgba(240, 255, 255, 0.25); */
+
+  /* black hole sun */
+  /* background-image: radial-gradient(
+    rgb(0, 0, 0) 2.5%,
+    rgba(0, 0, 0, 0.101) 60%,
+    rgba(0, 0, 0, 0.023)
+  );
+  border-radius: 480px; */
+
+  font-size: 38px;
 }
 
 #second_pg {
@@ -112,7 +134,9 @@ img {
 
 a {
   text-decoration: none;
-  color: black;
+  /* color: black; */
+  color: whitesmoke;
+  font-size: 24px;
 }
 
 #about,
