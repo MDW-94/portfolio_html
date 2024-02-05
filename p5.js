@@ -27,7 +27,7 @@ function draw() {
 
 // this class describes the properties of a single particle.
 // class Particle {
-//     // setting the co-ordinates, radius and the
+// //     // setting the co-ordinates, radius and the
 //     // speed of a particle in both the co-ordinates axes.
 //       constructor(){
 //         this.x = random(0,width);

@@ -44,6 +44,8 @@ html {
 
 #root {
   /* background-image: url('./bg1.png'); */
+
+  /* ------- For Static Background ------ */
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.814) 2.5%,
@@ -51,9 +53,13 @@ html {
     ),
     url("./bg1.png");
 
+  /* ----- For p5.js ----- */
   /* background-image: linear-gradient(
-    rgba(0, 0, 0, 0), 
-    teal); */
+    to bottom,
+      rgba(0, 0, 0, 0.814) 2.5%,
+      rgba(0, 128, 128, 0.361) 100%
+  ); */
+
   position: absolute;
   overflow: scroll;
   scroll-behavior: smooth;
