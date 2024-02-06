@@ -1,12 +1,12 @@
-function setup() {
-    createCanvas(window.innerWidth+100, window.innerHeight+100);
-    // +100 just for complete coverage for now - p5 needs updateable draw function
-}
+// function setup() {
+//     createCanvas(window.innerWidth+100, window.innerHeight+100);
+//     // +100 just for complete coverage for now - p5 needs updateable draw function
+// }
 
-function draw() {
-    background(200, 239, 200);
-    windowResized();
-}
+// function draw() {
+//     background(200, 239, 200);
+//     windowResized();
+// }
 
 // https://toolness.github.io/p5.js-widget/
 // https://developer.mozilla.org/en-US/docs/Web/API/window/innerWidth
