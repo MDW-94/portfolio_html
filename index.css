@@ -63,6 +63,7 @@ html {
   ); */
 
   position: absolute;
+
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-points-y: repeat(100vh);
@@ -109,16 +110,12 @@ section {
   );
   border-radius: 480px; */
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 75vw;
+  width: 100vw;
   margin-top: 128px;
   gap: 16px;
 
   font-size: 38px;
-  text-shadow: 0px -8px 8px #000000fd;
+  text-shadow: 4px 8px 8px #000000fd;
 }
 
 .social_icons {
@@ -131,6 +128,7 @@ section {
   width: 75vw;
   padding: 2px;
   gap: 10%;
+
 }
 
 #icon_cv,
@@ -141,6 +139,7 @@ section {
   opacity: 0.9;
   padding: 0px;
   /* box-shadow: 0px -8px 16px #000000fd; */
+  object-fit: fill;
 }
 
 #second_pg {
