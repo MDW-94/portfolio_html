@@ -266,26 +266,36 @@ a {
   align-items: center;
 }
 
+hr {
+  min-height: 30%;
+  max-height: 50%;
+  margin: 0;
+  color: whitesmoke;
+  border: solid 2px whitesmoke;
+}
+
 h3 {
   margin: 0;
 }
 
 .header_profile {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  /* gap: 8px; */
 }
 
 #about_titles {
-  border-right: solid 2px whitesmoke;
-  padding: 8px;
+  /* border-right: solid 2px whitesmoke; */
+  padding: 16px;
   padding-top: 12px;
   word-wrap: break-word;
+  width: 10em;
 }
 
 #profile_img {
   /* position: fixed; */
-  width: 30%;
+  width: 40%;
   max-width: 256px;
   border-radius: 128px;
   padding: 12px;
