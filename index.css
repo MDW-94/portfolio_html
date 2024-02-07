@@ -301,12 +301,16 @@ h3 {
 }
 
 #about_text {
+  background-color: rgba(0, 0, 0, 0.453);
+  /* border: solid 1px whitesmoke; */
+  border-radius: 8px;
   flex-direction: column;
+
   align-self: center;
   text-align: start;
   min-width: 128px;
-  max-width: 85%;
-  padding: 12px;
+  max-width: 80%;
+  padding: 16px;
 }
 
 #third_pg {
