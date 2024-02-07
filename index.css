@@ -259,7 +259,7 @@ a {
 }
 
 #second_pg {
-  background-color: rgb(240, 255, 255, 0.7);
+  /* background-color: rgb(240, 255, 255, 0.7); */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -268,7 +268,7 @@ a {
 
 hr {
   min-height: 30%;
-  max-height: 50%;
+  max-height: 75%;
   margin: 0;
   color: whitesmoke;
   border: solid 2px whitesmoke;
@@ -280,13 +280,13 @@ h3 {
 
 .header_profile {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  /* gap: 8px; */
+  width: 100%;
+  gap: 4px;
 }
 
 #about_titles {
-  /* border-right: solid 2px whitesmoke; */
   padding: 16px;
   padding-top: 12px;
   word-wrap: break-word;
@@ -294,20 +294,19 @@ h3 {
 }
 
 #profile_img {
-  /* position: fixed; */
   width: 40%;
   max-width: 256px;
-  border-radius: 128px;
+  border-radius: 192px;
   padding: 12px;
-  /* top: 16px; */
 }
 
 #about_text {
-  /* position: fixed; */
   flex-direction: column;
-  justify-content: left;
-  align-items: center;
-  max-width: 256px;
+  align-self: center;
+  text-align: start;
+  min-width: 128px;
+  max-width: 85%;
+  padding: 12px;
 }
 
 #third_pg {
