@@ -28,10 +28,14 @@ body,
   text-align: center;
   font-size: 16px;
   word-spacing: 1px;
-  /* text-shadow: 4px 4px 5px #000000fd; */
-  /* color: whitesmoke; */
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -99,7 +103,6 @@ section {
 }
 
 #first_pg {
-  /* background-color: rgb(255, 127, 80, 0.85); */
   /* background-color: rgba(240, 255, 255, 0.25); */
 
   /* black hole sun */
@@ -114,8 +117,99 @@ section {
   margin-top: 128px;
   gap: 16px;
 
-  font-size: 38px;
-  text-shadow: 4px 8px 8px #000000fd;
+  color: rgb(234, 234, 234);
+  text-shadow: 0px 0px 12px #000000fd;
+
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+  /* border: solid 1px whitesmoke; */
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.main_header {
+  font-size: 32px;
+  margin: 0;
+}
+
+#sub_title {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.smooth_scroll_main {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 75%;
+}
+
+a {
+  text-decoration: none;
+  /* color: black; */
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+#about,
+#projects,
+#contact {
+  font-size: 18px;
+  font-weight: 500;
+  gap: 8px;
+  padding: 8px;
+  opacity: 0.9;
+
+  color: rgb(234, 234, 234);
+  @media screen and (max-width: 760px) {
+    font-size: 16px;
+  }
+}
+
+#about {
+  &:hover {
+    background-color: lightblue;
+    border-radius: 8px;
+    transform: scale(1.2);
+    transition: 1s;
+  }
+}
+
+#projects {
+  &:hover {
+    background-color: lightcoral;
+    border-radius: 8px;
+    transform: scale(1.2);
+    transition: 1s;
+  }
+}
+
+#contact {
+  &:hover {
+    background-color: lightgreen;
+    border-radius: 8px;
+    transform: scale(1.2);
+    transition: 1s;
+  }
 }
 
 .social_icons {
@@ -134,11 +228,14 @@ section {
 #icon_email,
 #icon_ln,
 #icon_gh {
-  width: 48px;
+  width: 32px;
   opacity: 0.9;
   padding: 0px;
   /* box-shadow: 0px -8px 16px #000000fd; */
   object-fit: fill;
+  &:hover {
+    opacity: 0.3;
+  }
 }
 
 #second_pg {
@@ -174,30 +271,3 @@ section {
 }
 
 /* ------ */
-
-.smooth_scroll_main {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  font-weight: 300;
-  padding: 16px;
-  width: 75%;
-}
-
-a {
-  text-decoration: none;
-  /* color: black; */
-  color: whitesmoke;
-  font-size: 24px;
-}
-
-#about,
-#projects,
-#contact {
-  font-size: 24px;
-  gap: 16px;
-
-  @media screen and (max-width: 760px) {
-    font-size: 16px;
-  }
-}
