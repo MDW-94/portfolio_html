@@ -117,8 +117,6 @@ section {
 }
 
 #first_pg {
-  /* background-color: rgba(240, 255, 255, 0.25); */
-
   /* black hole sun */
   /* background-image: radial-gradient(
     rgb(0, 0, 0) 2.5%,
@@ -169,7 +167,7 @@ h1 {
   margin-top: 0;
   font-weight: 300;
   font-size: 18px;
-  opacity: 0.9;
+  font-stretch:condensed;
   color: #dbdbdb;
 
   animation-delay: 350ms;
@@ -196,6 +194,7 @@ a {
   /* color: black; */
   color: whitesmoke;
   font-size: 18px;
+  font-weight: 300;
 }
 
 #about,
@@ -311,6 +310,7 @@ h3 {
   min-width: 128px;
   max-width: 80%;
   padding: 16px;
+  font-weight: 300;
 }
 
 #about_text::first-letter {
