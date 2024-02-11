@@ -78,7 +78,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "EB Garamond", serif;
+  /* font-family: "EB Garamond", serif; */
+  font-family: "Monserrat", sans-serif;
 }
 
 a,
@@ -146,7 +147,7 @@ section {
 
 h1 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   /* border: solid 1px whitesmoke; */
   padding: 8px;
   padding-left: 12px;
@@ -268,9 +269,10 @@ hr {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 300;
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .header_profile {
