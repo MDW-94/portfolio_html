@@ -57,7 +57,7 @@ html {
     ),
     url("./bg1.png");
 
-  /* ----- For p5.js ----- */
+  /* ----- For p5.js || flowfield.ts ----- */
   /* background-image: linear-gradient(
     to bottom,
       rgba(0, 0, 0, 0.814) 2.5%,
