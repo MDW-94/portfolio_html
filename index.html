@@ -26,17 +26,30 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script type="text/javascript" src="./script.js">
+    </script>
     <title>Matthew D. Wasylko Portfolio</title>
   </head>
   <body>
     <div id="root">
       <nav id="conditionalNav">
         <h2 id="navTitle">M. Wasylko</h2>
-        <!-- <a href="#second_pg" id="about">About</a>
-        <a href="#third_pg" id="projects">Projects</a>
-        <a href="#fourth_pg" id="contact">Contact</a> -->
-        <img id="navBurg" src="./Images/gray_menu_burg.png" />
+        
+        <img id="navBurg" src="./Images/gray_menu_burg.png" onclick="handleClick_1()" />
+        <div id="side_menu" style="display: none;">
+          <a href="#second_pg" id="about" onclick="handleClick_1()">About</a>
+          <a href="#third_pg" id="projects" onclick="handleClick_1()">Projects</a>
+          <a href="#fourth_pg" id="contact" onclick="handleClick_1()">Contact</a>
+            <div class="social_icons_side">
+              <img id="icon_ln" src="./Images/logo20.png" />
+              <img id="icon_email" src="./Images/logo18.png" />
+              <img id="icon_cv" src="./Images/logo17.png" />
+              <img id="icon_gh" src="./Images/logo21.png" />
+            </div>
+        </div>
       </nav>
+
+     
       <section id="first_pg">
         <div class="smooth_scroll_main">
           <a href="#second_pg" id="about">About</a>
