@@ -109,6 +109,10 @@ function setup() {
   stroke(255);
   //set the size of the particles
   strokeWeight(1);
+
+  // Button to stop start animation
+  let button = createButton('Play/Pause');
+  button.position(width_main/2 -90, (height_main/10)*8.375);
 }
 
 function windowResized() {
