@@ -50,19 +50,19 @@ html {
   /* background-image: url('./bg1.png'); */
 
   /* ------- For Static Background ------ */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.814) 2.5%,
       rgba(0, 128, 128, 0.361) 100%
     ),
-    url("./bg1.png");
+    url("./bg1.png"); */
 
   /* ----- For p5.js || flowfield.ts ----- */
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     to bottom,
-      rgba(0, 0, 0, 0.814) 2.5%,
-      rgba(0, 128, 128, 0.361) 100%
-  ); */
+    rgba(0, 0, 0, 0.814) 2.5%,
+    rgba(0, 128, 128, 0.361) 100%
+  );
 
   position: absolute;
 
@@ -89,18 +89,27 @@ p {
   font-weight: 400;
 }
 
+#conditionalNav {
+  position: fixed;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  background: black;
+}
+
 /* --------------- */
 
 section {
   padding: 0;
   margin: 0;
-  transform: translate(5%, 0%);
   overflow: hidden;
   height: 90vh;
-  max-width: 90vw;
+  max-width: 100%;
   max-height: 100vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 4.5vh;
+  margin-bottom: 5.5vh;
 
   display: flex;
   flex-direction: column;
@@ -129,9 +138,11 @@ section {
   width: 100vw;
   margin-top: 128px;
   gap: 16px;
+  justify-content: center;
+  align-items: center;
 
   color: rgb(234, 234, 234);
-  text-shadow: 0px 0px 16px #000000a1;
+  /* text-shadow: 0px 0px 8px #000000a1; */
 }
 
 @keyframes fadeInOpacity {
@@ -150,11 +161,22 @@ h1 {
   margin: 0;
   font-weight: 400;
   /* border: solid 1px whitesmoke; */
-  padding: 8px;
+  padding: 4px;
   padding-left: 12px;
   padding-right: 12px;
 
-  background-image: linear-gradient(25deg, lightgray,whitesmoke, whitesmoke, lightgray);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgb(245, 245, 245),
+    rgba(56, 105, 93, 0.555) 32px,
+    transparent 0px,
+    transparent 2px
+  );
+  /* linear-gradient(45deg, 
+  rgb(116, 116, 116),
+  whitesmoke,
+  whitesmoke,
+  rgb(116, 116, 116)); */
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -172,7 +194,7 @@ h1 {
 
 #sub_title {
   margin-top: 0;
-  padding: 8px;
+  padding: 4px;
   font-weight: 300;
   font-size: 18px;
   font-stretch: condensed;
@@ -188,6 +210,7 @@ h1 {
 .smooth_scroll_main {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   text-align: center;
   width: 75%;
 
@@ -210,8 +233,8 @@ a {
 #contact {
   font-size: 18px;
   font-weight: 500;
-  gap: 8px;
-  padding: 8px;
+  gap: 4px;
+  padding: 4px;
   opacity: 0.9;
 
   color: rgb(234, 234, 234);
@@ -227,7 +250,7 @@ a {
 }
 
 .social_icons {
-  position: fixed;
+  position: static;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +274,6 @@ a {
   width: 32px;
   opacity: 0.9;
   padding: 0px;
-  /* box-shadow: 0px -8px 16px #000000fd; */
   object-fit: fill;
   &:hover {
     opacity: 0.3;
@@ -309,7 +331,9 @@ h3 {
 } */
 
 #about_text {
-  background-color: rgba(0, 0, 0, 0.453);
+  background-color: rgba(0, 0, 0, 0.456);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(32px);
   /* border: solid 1px whitesmoke; */
   border-radius: 8px;
   flex-direction: column;
@@ -336,3 +360,5 @@ h3 {
 }
 
 /* ------ */
+
+/* https://fossheim.io/writing/posts/css-text-gradient/ */

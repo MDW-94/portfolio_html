@@ -7,10 +7,16 @@
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
     <meta name="description" content="Portfolio | Matthew David Wasylko" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inconsolata:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inconsolata:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -19,33 +25,22 @@
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js">
-      $(document).ready(function(){
-          $("a").on('click', function(event){
-              if(this.hash !== "") {
-              event.preventDefault();
-              let hash = this.hash;
-
-              $('html, body').animate({
-              scrollTop: $(hash).offset().top
-              }, 500, function(){
-              window.location.hash = hash;
-              });
-          }
-          });
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <title>Matthew D. Wasylko Portfolio</title>
   </head>
   <body>
     <div id="root">
+      <nav id="conditionalNav">
+        <a href="#second_pg" id="about">About</a>
+        <a href="#third_pg" id="projects">Projects</a>
+        <a href="#fourth_pg" id="contact">Contact</a>
+      </nav>
       <section id="first_pg">
         <div class="smooth_scroll_main">
-            <a href="#second_pg" id="about">About</a>
-            <a href="#third_pg" id="projects">Projects</a>
-            <a href="#fourth_pg" id="contact">Contact</a>
-          </div>
+          <a href="#second_pg" id="about">About</a>
+          <a href="#third_pg" id="projects">Projects</a>
+          <a href="#fourth_pg" id="contact">Contact</a>
+        </div>
         <div class="main_header">
           <h1>Matthew David Wasylko</h1>
           <i id="sub_title">Software Developer</i>
@@ -59,17 +54,18 @@
       </section>
       <section id="second_pg">
         <div class="header_profile">
-            <div id="about_titles">
-                <h3>Matthew David Wasylko</h3>
-                  <i style="font-weight: 300;">Software Developer</i>
-              </div>
-              <hr/ >
-              <img id="profile_img" src="./photo1.png" />
+          <div id="about_titles">
+            <h3>Matthew David Wasylko</h3>
+            <i style="font-weight: 300">Software Developer</i>
+          </div>
+          <hr/ >
+          <img id="profile_img" src="./photo1.png" />
         </div>
         <div id="about_text">
-          <p>
-            Software developer, based in Glasgow - I am passionate for GIS, creative coding and technology that benefits society.
-          </p>
+            <p>
+              Software developer, based in Glasgow - I am passionate for GIS,
+              creative coding and technology that benefits society.
+            </p>          
         </div>
       </section>
       <section id="third_pg">
@@ -89,9 +85,41 @@
             right: 12px;
             bottom: 0px;
             font-size: 12px;">© 2024 M. Wasylko</p> -->
+
+    <script type="text/javascript" src="./script.js">
+      $(document).ready(function(){
+            $("a").on('click', function(event){
+                if(this.hash !== "") {
+                event.preventDefault();
+                let hash = this.hash;
+
+                $('html, body').animate({
+                scrollTop: $(hash).offset().top
+                }, 500, function(){
+                window.location.hash = hash;
+                });
+            }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+        const navElement = document.getElementById('conditionalNav');
+        const observer = new IntersectionObserver(entries => {
+          const firstSectionOutOfView = entries[0].boundingClientRect.bottom <= 0;
+          if (firstSectionOutOfView) {
+            navElement.style.display = 'flex';
+          } else {
+            navElement.style.display = 'none';
+          }
+        });
+    
+        const firstSection = document.getElementById('first_pg'); // Change this to the ID of your first section
+        observer.observe(firstSection);
+      });
+    </script>
   </body>
 </html>
-
 
 <!-- https://codepen.io/natalieannebirch/pen/MWbKyyg   Image Carousel - Vanilla JS-->
 
