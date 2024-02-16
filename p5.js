@@ -112,8 +112,12 @@ function setup() {
 
   // Button to stop start animation
   let button = createButton('Play/Pause');
-  button.position(width_main/2 -90, (height_main/10)*8.375);
-  button.id = 'p5_button';
+  button.position(width_main/2 -90, (height_main/10)*8.4125);
+  let col_black = color(0, 0, 0, 0.4);
+  let col_white = color(245, 245, 245);
+  button.style('background-color', col_black);
+  button.style('color', col_white);
+  button.style('border', 'none');
 
   button.mousePressed(() => {
     // code body
