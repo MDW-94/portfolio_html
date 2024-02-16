@@ -116,7 +116,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(0);
+  background(0, 10); // if we give the background an alpha value we can see previous iterations
   for (let i = 0; i < num; i++) {
     let p = particles[i];
     point(p.x, p.y);
