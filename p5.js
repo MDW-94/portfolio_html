@@ -113,6 +113,11 @@ function setup() {
   // Button to stop start animation
   let button = createButton('Play/Pause');
   button.position(width_main/2 -90, (height_main/10)*8.375);
+  button.id = 'p5_button';
+
+  button.mousePressed(() => {
+    // code body
+  })
 }
 
 function windowResized() {
@@ -121,6 +126,8 @@ function windowResized() {
 
 function draw() {
   background(0, 10); // if we give the background an alpha value we can see previous iterations
+
+  // this is the for loop that animates everything
   for (let i = 0; i < num; i++) {
     let p = particles[i];
     point(p.x, p.y);
