@@ -129,7 +129,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(0, 10); // if we give the background an alpha value we can see previous iterations
+  background(0, 15); // if we give the background an alpha value we can see previous iterations
 
   // this is the for loop that animates everything
   for (let i = 0; i < num; i++) {
