@@ -96,7 +96,7 @@ const height_main = window.innerHeight + 100;
 const width_main = window.innerWidth + 100;
 
 let particles = [];
-const num = 100;
+const num = 10000;
 const noiseScale = 0.01;
 
 function setup() {
