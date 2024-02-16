@@ -35,7 +35,7 @@
         <!-- <a href="#second_pg" id="about">About</a>
         <a href="#third_pg" id="projects">Projects</a>
         <a href="#fourth_pg" id="contact">Contact</a> -->
-        <img id="navBurg" src="./Images/gray_menu_burg.png"/>
+        <img id="navBurg" src="./Images/gray_menu_burg.png" />
       </nav>
       <section id="first_pg">
         <div class="smooth_scroll_main">
@@ -64,10 +64,10 @@
           <img id="profile_img" src="./photo1.png" />
         </div>
         <div id="about_text">
-            <p>
-              Software developer, based in Glasgow - I am passionate for GIS,
-              creative coding and technology that benefits society.
-            </p>          
+          <p>
+            Software developer, based in Glasgow - I am passionate for GIS,
+            creative coding and technology that benefits society.
+          </p>
         </div>
       </section>
       <section id="third_pg">
@@ -81,12 +81,9 @@
       style="position: absolute; margin: 0; padding: 0"
       src="p5.js"
     ></script>
-    <!-- <p 
-            style=
-            "position: absolute;
-            right: 12px;
-            bottom: 0px;
-            font-size: 12px;">© 2024 M. Wasylko</p> -->
+    <!-- <p style="position: fixed; right: 12px; bottom: 0px; font-size: 12px">
+      © 2024 M. Wasylko
+    </p> -->
 
     <script type="text/javascript" src="./script.js">
       $(document).ready(function(){
@@ -105,18 +102,19 @@
         });
     </script>
     <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function () {
-        const navElement = document.getElementById('conditionalNav');
-        const observer = new IntersectionObserver(entries => {
-          const firstSectionOutOfView = entries[0].boundingClientRect.bottom <= 0;
+      document.addEventListener("DOMContentLoaded", function () {
+        const navElement = document.getElementById("conditionalNav");
+        const observer = new IntersectionObserver((entries) => {
+          const firstSectionOutOfView =
+            entries[0].boundingClientRect.bottom <= 0;
           if (firstSectionOutOfView) {
-            navElement.style.display = 'flex';
+            navElement.style.display = "flex";
           } else {
-            navElement.style.display = 'none';
+            navElement.style.display = "none";
           }
         });
-    
-        const firstSection = document.getElementById('first_pg'); // Change this to the ID of your first section
+
+        const firstSection = document.getElementById("first_pg"); // Change this to the ID of your first section
         observer.observe(firstSection);
       });
     </script>

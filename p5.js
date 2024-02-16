@@ -95,8 +95,20 @@
 const height_main = window.innerHeight + 100;
 const width_main = window.innerWidth + 100;
 
+let particles = [];
+const num = 100;
+const noiseScale = 0.01;
+
 function setup() {
   createCanvas(width_main, height_main);
+  // initialises particles using for loop
+  for (let i = 0; i < num; i++) {
+    particles.push(createVector(random(width), random(height)));
+  }
+  // set stroke to white so particles appear
+  stroke(255);
+  //set the size of the particles
+  strokeWeight(1);
 }
 
 function windowResized() {
@@ -104,5 +116,27 @@ function windowResized() {
 }
 
 function draw() {
-  background(200);
+  background(0);
+  for (let i = 0; i < num; i++) {
+    let p = particles[i];
+    point(p.x, p.y);
+    // if we left the p.x, p.y values the noise would be super grainy - we'd be too zoomed out - noiseScale (0.01) zooms in
+    let n = noise(p.x * noiseScale, p.y * noiseScale);
+    // TAU = PI * 2
+    let a = TAU * n;
+    // Trigonometry, converting an angle to x and y
+    p.x += cos(a); //* speedValue;
+    p.y += sin(a);
+    if (!onScreen(p)) {
+      // if they;re not on screen, give them new random position
+      p.x = random(width);
+      p.y = random(height);
+    }
+  }
+}
+
+//Without this function our particles would just leave the screen
+function onScreen(v) {
+  // x has to be between 0 and width
+  return v.x >= 0 && v.x <= width && v.y >= 0 && v.y <= height;
 }
