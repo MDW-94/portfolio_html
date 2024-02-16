@@ -135,6 +135,11 @@ function draw() {
   }
 }
 
+function mouseReleased(){
+  // generate a new noise seed on click
+  noiseSeed(millis());
+}
+
 //Without this function our particles would just leave the screen
 function onScreen(v) {
   // x has to be between 0 and width
