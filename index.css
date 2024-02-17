@@ -89,6 +89,10 @@ p {
   font-weight: 400;
 }
 
+i {
+  color: rgba(175, 175, 175);
+}
+
 #conditionalNav {
   z-index: 1;
   padding: 4px;
@@ -247,10 +251,10 @@ h1 {
 #sub_title {
   margin-top: 0;
   padding: 4px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   font-stretch: condensed;
-  color: #dbdbdb;
+  /* color: #dbdbdb; */
 
   animation-delay: 350ms;
   animation-name: fadeInOpacity;
