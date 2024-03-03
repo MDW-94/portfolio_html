@@ -135,7 +135,7 @@ function positionButton() {
 
 function windowResized() {
   resizeCanvas(window.innerWidth + 100, window.innerHeight + 100);
-  positionButton();
+  positionButton(); // button may be better suited to placement at top of screen
 }
 
 function draw() {
