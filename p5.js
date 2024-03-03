@@ -92,8 +92,9 @@
 
 // --------------------------
 
-const height_main = window.innerHeight + 100;
-const width_main = window.innerWidth + 100;
+let height_main = window.innerHeight + 100;
+let width_main = window.innerWidth + 100;
+let button;
 
 let particles = [];
 const num = 10000;
@@ -109,31 +110,40 @@ function setup() {
   stroke(255);
   //set the size of the particles
   strokeWeight(1);
-
   // Button to stop start animation
-  let button = createButton('Play/Pause');
-  button.position(width_main/2 -90, (height_main/10)*8.4125); // ternary to call resizeCanvas parameters?
+  button = createButton("Play/Pause");
+  // button.position(width_main / 2 - 90, (height_main / 10) * 8.3); // ternary to call resizeCanvas parameters?
+  positionButton();
+}
+
+function positionButton() {
+  let height_main = window.innerHeight + 100;
+  let width_main = window.innerWidth + 100;
+  button.position(width_main / 2 - 90, (height_main / 10) * 8.3125);
+
   let col_black = color(0, 0, 0, 0.4);
   let col_white = color(245, 245, 245);
-  button.style('background-color', col_black);
-  button.style('color', col_white);
-  button.style('border', 'none');
+  button.style("background-color", col_black);
+  button.style("color", col_white);
+  button.style("border", "none");
 
   button.mousePressed(() => {
     // code body
-    console.log("button working")
-  })
+    console.log("button working");
+  });
 }
 
 function windowResized() {
   resizeCanvas(window.innerWidth + 100, window.innerHeight + 100);
+  positionButton();
 }
 
 function draw() {
   background(0, 15); // if we give the background an alpha value we can see previous iterations
 
   // this is the for loop that animates everything
-  for (let i = 0; i < num; i++) { // take i++ and put at bottom of function?
+  for (let i = 0; i < num; i++) {
+    // take i++ and put at bottom of function?
     let p = particles[i];
     point(p.x, p.y);
     // if we left the p.x, p.y values the noise would be super grainy - we'd be too zoomed out - noiseScale (0.01) zooms in
@@ -155,7 +165,7 @@ function draw() {
 
 // in Javascript, a 'for' loop is a sychronous operation that runs without yielding control back to the event loop until it completes. Therrefore, trying to create a play/pause button for a 'for' loop directly is challenging - to achieve a play/pause functionality, it's better to use asynchronous operations and utilize functions like 'setInterval' or 'requestAnimationFrame' - 'requestAnimationFrame' is more precise
 
-function mouseReleased(){
+function mouseReleased() {
   // generate a new noise seed on click
   noiseSeed(millis());
 }
