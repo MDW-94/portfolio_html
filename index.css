@@ -457,13 +457,23 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 12px;
+  /* margin: 12px; */
   margin-top: 12px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
+}
+
+.carousel_slide_info hr {
+  min-height: 75%;
+  max-height: 95%;
+}
+
+.project_info {
+  flex: 3;
 }
 
 .project_num {
-  border-left: solid 2px whitesmoke;
+  /* border-left: solid 4px whitesmoke; */
+  flex: 1;
   padding: 12px;
   margin: 0;
 }
