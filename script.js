@@ -5,12 +5,12 @@ function handleClick_1(){
       side_menu.style.display = 'flex';
       nav_menu.style.height = '100vh';
 
-      console.log("onClick - open")
+      // console.log("onClick - open")
     } else {
         side_menu.style.display = 'none';
         nav_menu.style.height = '32px';
 
-        console.log("onClick - close")
+        // console.log("onClick - close")
 
     }
   }
