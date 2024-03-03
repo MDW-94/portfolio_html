@@ -28,12 +28,11 @@ body,
   text-align: center;
   font-size: 16px;
   word-spacing: 1px;
-  margin: 0;
 }
 
 body,
 html {
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -440,7 +439,7 @@ h3 {
   width: 100vw;
   height: 100%;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .carousel_slide {
@@ -450,7 +449,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 48px;
+  gap: 32px;
   margin: 0;
 }
 
@@ -461,6 +460,22 @@ h3 {
   margin: 12px;
   margin-top: 12px;
   margin-right: 24px;
+}
+
+.project_num {
+  border-left: solid 2px whitesmoke;
+  padding: 12px;
+  margin: 0;
+}
+
+#project_num_word {
+  margin: 0;
+  font-size: 12px;
+}
+
+#project_num_int {
+  margin: 0;
+  font-size: 48px;
 }
 
 .carousel_slide img {

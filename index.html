@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+      content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"
     />
     <meta name="description" content="Portfolio | Matthew David Wasylko" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +24,6 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>"
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <script type="text/javascript" src="./script.js">
     </script>
@@ -90,8 +89,14 @@
           <div class="carousel_slider">
               <div class ="carousel_slide">
                   <div class="carousel_slide_info">
-                    <h3>Text About The Slide</h3>
-                    <p>This will be some text regarding the project</p>
+                    <div>
+                      <h4>Text About The Slide</h3>
+                      <p>Information regarding project</p>
+                    </div>
+                    <div class="project_num">
+                      <i id="project_num_word">Project //</i>
+                      <p id="project_num_int">01.</p>
+                    </div>
                   </div>
                   <img 
                   src="./Images/projects/gis_app.png"
@@ -135,24 +140,6 @@
       style="position: absolute; margin: 0; padding: 0"
       src="p5.js"
     ></script>
-    
-
-    <script type="text/javascript" src="./script.js">
-      $(document).ready(function(){
-            $("a").on('click', function(event){
-                if(this.hash !== "") {
-                event.preventDefault();
-                let hash = this.hash;
-
-                $('html, body').animate({
-                scrollTop: $(hash).offset().top
-                }, 500, function(){
-                window.location.hash = hash;
-                });
-            }
-            });
-        });
-    </script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
         const navElement = document.getElementById("conditionalNav");
