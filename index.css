@@ -29,6 +29,7 @@ body,
   font-size: 16px;
   word-spacing: 1px;
   overflow-x: hidden;
+
 }
 
 body,
@@ -43,6 +44,8 @@ html {
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
+
+  background: black;
 }
 
 #root {
@@ -64,7 +67,6 @@ html {
   );
 
   position: absolute;
-
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-points-y: repeat(100vh);
@@ -440,11 +442,13 @@ h3 {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0.385); */
 }
 
 .carousel_slide {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   margin-top: 32px;
   position: absolute;
   display: flex;

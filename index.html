@@ -30,24 +30,22 @@
     <div id="root">
       <nav id="conditionalNav">
         <h2 id="navTitle">M. Wasylko</h2>
-        
-        <img id="navBurg" src="./Images/gray_menu_burg.png" onclick="handleClick_1()" />
-        <div id="side_menu" style="display: none;">
-          <a href="#second_pg" id="about" onclick="handleClick_1()">About</a>
-          <a href="#third_pg" id="projects" onclick="handleClick_1()">Projects</a>
-          <a href="#fourth_pg" id="contact" onclick="handleClick_1()">Contact</a>
-            <div class="social_icons_side">
-              <img id="icon_ln" src="./Images/logo20.png" />
-              <img id="icon_email" src="./Images/logo18.png" />
-              <img id="icon_cv" src="./Images/logo17.png" />
-              <img id="icon_gh" src="./Images/logo21.png" />
+          <img id="navBurg" src="./Images/gray_menu_burg.png" onclick="handleClick_1()" />
+            <div id="side_menu" style="display: none;">
+              <a href="#second_pg" id="about" onclick="handleClick_1()">About</a>
+              <a href="#third_pg" id="projects" onclick="handleClick_1()">Projects</a>
+              <a href="#fourth_pg" id="contact" onclick="handleClick_1()">Contact</a>
+                <div class="social_icons_side">
+                  <img id="icon_ln" src="./Images/logo20.png" />
+                  <img id="icon_email" src="./Images/logo18.png" />
+                  <img id="icon_cv" src="./Images/logo17.png" />
+                  <img id="icon_gh" src="./Images/logo21.png" />
+                </div>
+                <p id="made_in">Made in Vanilla.js</p>
+                <p id="copyright_sig">© 2024 M. Wasylko</p>
             </div>
-            <p id="made_in">Made in Vanilla.js</p>
-            <p id="copyright_sig">© 2024 M. Wasylko</p>
-        </div>
       </nav>
 
-     
       <section id="first_pg">
         <div class="smooth_scroll_main">
           <a href="#second_pg" id="about">About</a>
@@ -82,7 +80,7 @@
         </div>
       </section>
       <section id="third_pg" >
-        <div class="carousel_body">
+        <div class="carousel_body" style="overflow-x: hidden;">
           <div class="carousel_slider">
               <div class ="carousel_slide">
                   <div class="carousel_slide_info">
@@ -112,12 +110,12 @@
                     <p id="project_description">React, p5.js, tone.js, Spring.io, Java - Deployed with Vercel</p>
                     <a id="deployment_link" href="https://dramm-synthesizer.vercel.app/">View App </a>
                     
-                  </div>
+                    </div>
                   <hr id="project_line"/>
                   <div class="project_num">
                     <i id="project_num_word">Project //</i>
                     <p id="project_num_int">02.</p>
-                  </div>
+                    </div>
                 </div>  
                   <img 
                   src="./Images/projects/synth_app.png"
@@ -149,9 +147,8 @@
         <p>Fourth page - "Contact"</p>
       </section>
     </div>
-    
     <script
-      style="position: absolute; margin: 0; padding: 0"
+      style="position: absolute; margin: 0; padding: 0;"
       src="p5.js"
     ></script>
     <script type="text/javascript">
@@ -175,8 +172,8 @@
       const slides = document.querySelectorAll(".carousel_slide");
 
       slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${index*100}%)`;
-      })
+        slide.style.transform = `translateX(${index*100}%)`
+      });
 
       const nextSlide = document.querySelector(".btn-next");
 
@@ -190,15 +187,24 @@
         } else {
           curSlide++;
         }
-
-
         slides.forEach((slide, index) => {
           slide.style.transform = `translateX(${100 * (index - curSlide)}%)`
         });
       });
 
+      const prevSlide = document.querySelector('.btn-prev');
 
+      prevSlide.addEventListener("click", function() {
+        if(curSlide == 0){
+          curSlide == maxSlide;
+        } else {
+          curSlide--;
+        }
 
+        slides.forEach((slide, index) => {
+          slide.style.transform = `translateX(${100 * (index - curSlide)}%)`
+        })
+      });
     </script>
   </body>
 </html>
