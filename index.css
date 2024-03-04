@@ -29,7 +29,6 @@ body,
   font-size: 16px;
   word-spacing: 1px;
   overflow-x: hidden;
-
 }
 
 body,
@@ -456,6 +455,9 @@ h3 {
   justify-content: space-evenly;
   gap: 24px;
   margin: 0;
+  transition: all 1s;
+  /* need to modify to make sure that when resizing the window the resize is instant */
+  /* could also add animation that allows the writing and slides to ease in or change somehow */
 }
 
 .carousel_slide_info {
@@ -587,3 +589,7 @@ h3 {
 /* ------ */
 
 /* https://fossheim.io/writing/posts/css-text-gradient/ */
+
+/* https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/ */
+
+/* https://gsap.com/ */
