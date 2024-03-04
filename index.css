@@ -461,8 +461,8 @@ h3 {
   height: 64px;
 
   margin-top: 32px;
-  margin-left: 8px;
-  margin-right: 24px;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 #project_line {
@@ -509,7 +509,7 @@ h3 {
   margin-top: 4px;
   padding: 8px;
   border-radius: 8px;
-  align-self: flex-end;
+  align-self: flex-start;
   /* make it so on smaller screens... */
 }
 
@@ -541,7 +541,8 @@ h3 {
 
 .btn {
   position: absolute;
-  width: 40px;
+  width: 32px;
+  /* make width 48px on bigger screens w carousel slide info margin at same size */
   height: 100vh;
   padding: 12px;
   border: none;

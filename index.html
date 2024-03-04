@@ -105,14 +105,27 @@
                   >
               </div>
           
-              <!-- <div class ="carousel_slide">
+              <div class ="carousel_slide">
+                <div class="carousel_slide_info">
+                  <div class="project_info">
+                    <h4 id="project_title">DRAMM Audio/Visual Web Synth </h3>
+                    <p id="project_description">React, p5.js, tone.js, Spring.io, Java - Deployed with Vercel</p>
+                    <a id="deployment_link" href="https://dramm-synthesizer.vercel.app/">View App </a>
+                    
+                  </div>
+                  <hr id="project_line"/>
+                  <div class="project_num">
+                    <i id="project_num_word">Project //</i>
+                    <p id="project_num_int">02.</p>
+                  </div>
+                </div>  
                   <img 
-                  src=""
+                  src="./Images/projects/synth_app.png"
                   alt="a project"
                   >
               </div>
           
-              <div class ="carousel_slide">
+              <!-- <div class ="carousel_slide">
                   <img 
                   src=""
                   alt="a project"
@@ -158,9 +171,41 @@
         observer.observe(firstSection);
       });
     </script>
+    <script type="text/javascript">
+      const slides = document.querySelectorAll(".carousel_slide");
+
+      slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${index*100}%)`;
+      })
+
+      const nextSlide = document.querySelector(".btn-next");
+
+      let curSlide = 0;
+
+      let maxSlide = slides.length - 1;
+
+      nextSlide.addEventListener("click", function() {
+        if(curSlide === maxSlide){
+          curSlide = 0;
+        } else {
+          curSlide++;
+        }
+
+
+        slides.forEach((slide, index) => {
+          slide.style.transform = `translateX(${100 * (index - curSlide)}%)`
+        });
+      });
+
+
+
+    </script>
   </body>
 </html>
 
 <!-- https://codepen.io/natalieannebirch/pen/MWbKyyg   Image Carousel - Vanilla JS-->
 
 <!-- Why did you choose Vanilla.js? Because it has a better performance compared to using a framework - since I was using an animated background that would include some complex animation I wanted to strip the app down to exactly what I needed - If you want to see work of mien involving frameworks, check my projects -->
+
+
+<!-- https://blog.logrocket.com/build-image-carousel-from-scratch-vanilla-javascript/ -->
