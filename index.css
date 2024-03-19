@@ -455,9 +455,8 @@ h3 {
   justify-content: space-evenly;
   gap: 24px;
   margin: 0;
-  transition: all 1s;
-  /* need to modify to make sure that when resizing the window the resize is instant */
-  /* could also add animation that allows the writing and slides to ease in or change somehow */
+  transition: transform 1s;
+/* resizing issue fixed, calling only transform property now in transition */
 }
 
 .carousel_slide_info {
