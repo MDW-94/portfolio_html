@@ -140,6 +140,8 @@ i {
   backdrop-filter: blur(12px);
   height: 90vh;
   width: 100%;
+
+  /* transition?  =might need to add an entry animation by chaning display none to something else try visibility: hidden and animate*/
 }
 
 #made_in,
@@ -456,7 +458,7 @@ h3 {
   gap: 24px;
   margin: 0;
   transition: transform 1s;
-/* resizing issue fixed, calling only transform property now in transition */
+  /* resizing issue fixed, calling only transform property now in transition */
 }
 
 .carousel_slide_info {
@@ -539,8 +541,16 @@ h3 {
   width: 100%;
   height: 375px;
   object-fit: cover;
+  transition: filter 1s;
   @media screen and (max-width: 760px) {
     object-fit: cover;
+  }
+
+  &:hover {
+    filter: sepia(75%) blur(2px);
+    transition: 1s;
+
+    /* text visibility on? */
   }
 }
 
