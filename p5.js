@@ -19,9 +19,9 @@ function setup() {
   stroke(255);
   //set the size of the particles
   strokeWeight(0.75);
+
   // Button to stop start animation
   button = createButton("Play/Pause");
-  // button.position(width_main / 2 - 90, (height_main / 10) * 8.3); // ternary to call resizeCanvas parameters?
   positionButton();
 }
 
@@ -70,10 +70,6 @@ function draw() {
     }
   }
 }
-
-// https://www.youtube.com/watch?v=CqDqHiamRHA // setTimeout || setInterval might be the best bet for the play/pause option in the p5.js sketch
-
-// in Javascript, a 'for' loop is a sychronous operation that runs without yielding control back to the event loop until it completes. Therrefore, trying to create a play/pause button for a 'for' loop directly is challenging - to achieve a play/pause functionality, it's better to use asynchronous operations and utilize functions like 'setInterval' or 'requestAnimationFrame' - 'requestAnimationFrame' is more precise
 
 function mouseReleased() {
   // generate a new noise seed on click
