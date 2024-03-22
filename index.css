@@ -17,71 +17,588 @@
 768 x48
 */
 
-html, body, #root {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
+html,
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
 
-    text-align: center;
-    font-size: 16px;    
+  text-align: center;
+  font-size: 16px;
+  word-spacing: 1px;
+  overflow-x: hidden;
 }
 
-body, html {
-    overflow: hidden;
-   
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: whitesmoke; */
 
-    display: flex;
-    place-items: center;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 
-    background-color: whitesmoke;
+  background: black;
 }
 
 #root {
-    padding: 5%;
+  /* background-image: url('./bg1.png'); */
 
-    overflow: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-    
+  /* ------- For Static Background ------ */
+  /* background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.814) 2.5%,
+      rgba(0, 128, 128, 0.361) 100%
+    ),
+    url("./bg1.png"); */
+
+  /* ----- For p5.js || flowfield.ts ----- */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.814) 2.5%,
+    rgba(0, 128, 128, 0.361) 100%
+  );
+
+  position: absolute;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: "EB Garamond", serif; */
+  font-family: "Monserrat", sans-serif;
+}
 
+a,
+i,
+p {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 400;
+}
+
+i {
+  color: rgba(175, 175, 175);
+}
+
+#conditionalNav {
+  z-index: 1;
+  padding: 4px;
+  position: fixed;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  /* background: black; */
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(0, 0, 0),
+    rgba(0, 118, 118, 0.479) 8px,
+    transparent 0px,
+    transparent 4px
+  );
+}
+
+#navTitle {
+  color: whitesmoke;
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: 8px;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+#navBurg {
+  width: 16px;
+  margin-right: 24px;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+#side_menu {
+  /* z-index: 1; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(255, 127, 80, 0.244);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  height: 90vh;
+  width: 100%;
+
+  /* transition?  =might need to add an entry animation by chaning display none to something else try visibility: hidden and animate*/
+}
+
+#made_in,
+#copyright_sig {
+  position: fixed;
+  color: rgb(245, 245, 245);
+  bottom: 0px;
+  font-size: 12px;
+}
+
+#copyright_sig {
+  right: 16px;
+}
+
+.social_icons_side {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* writing-mode: vertical-rl; */
+  bottom: 0;
+  width: 75vw;
+  padding: 4px;
+  gap: 10%;
+}
 
 /* --------------- */
 
 section {
-    height: 100vh;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  margin-top: 4.5vh;
+  margin-bottom: 5.5vh;
 
-    max-width: 90vw;
-    max-height: 90vh;
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
+  display: flex;
+  flex-direction: column;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    scroll-snap-align: center;
+  scroll-snap-align: center;
 
-    border: 4px solid black;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+  border-radius: 8px;
+  color: whitesmoke;
 }
 
-.first_page {
-    background-color: #ff7f50;
+#first_pg {
+  /* black hole sun */
+  /* background-image: radial-gradient(
+    rgb(0, 0, 0) 2.5%,
+    rgba(0, 0, 0, 0.101) 60%,
+    rgba(0, 0, 0, 0.023)
+  );
+  border-radius: 480px; */
+
+  width: 100vw;
+  margin-top: 128px;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(234, 234, 234);
+  /* text-shadow: 0px 0px 8px #000000a1; */
 }
 
-.second_page {
-    background-color: #f0ffff;
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+    transform: scale(1.2) translate(0%, 2.5%);
+    transition: 1s;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.third_page {
-    background-color: #008080;
+h1 {
+  font-size: 48px;
+  margin: 0;
+  font-weight: 400;
+  /* border: solid 1px whitesmoke; */
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgb(245, 245, 245),
+    rgba(187, 187, 187, 0.555) 32px,
+    transparent 0px,
+    transparent 2px
+  );
+  /* linear-gradient(45deg, 
+  rgb(116, 116, 116),
+  whitesmoke,
+  whitesmoke,
+  rgb(116, 116, 116)); */
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-color: whitesmoke;
+  /* fallback header colour */
+
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
 }
 
-.fourth_page {
-    background-color: #ffc0cb;
+#sub_title {
+  margin-top: 0;
+  padding: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  font-stretch: condensed;
+  /* color: #dbdbdb; */
+
+  animation-delay: 350ms;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
 }
+
+.smooth_scroll_main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+
+  animation-delay: 350ms;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
+}
+
+a {
+  text-decoration: none;
+  /* color: black; */
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#about,
+#projects,
+#contact {
+  font-size: 18px;
+  font-weight: 500;
+  gap: 4px;
+  padding: 4px;
+  opacity: 0.9;
+
+  color: rgb(234, 234, 234);
+  @media screen and (max-width: 760px) {
+    font-size: 16px;
+  }
+  &:hover {
+    background-color: teal;
+    border-radius: 8px;
+    transform: scale(1.2);
+    transition: 1s;
+  }
+}
+
+.social_icons {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* writing-mode: vertical-rl; */
+  bottom: 0;
+  width: 75vw;
+  padding: 4px;
+  gap: 10%;
+
+  animation-delay: 350ms;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+#icon_cv,
+#icon_email,
+#icon_ln,
+#icon_gh {
+  width: 32px;
+  opacity: 0.9;
+  padding: 0px;
+  object-fit: fill;
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+#second_pg {
+  /* background-color: rgb(240, 255, 255, 0.7); */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#about_line {
+  min-height: 30%;
+  max-height: 75%;
+  margin: 0;
+  color: whitesmoke;
+  border: solid 2px whitesmoke;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.header_profile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+
+#about_titles {
+  padding: 16px;
+  padding-top: 12px;
+  word-wrap: break-word;
+  width: 10em;
+}
+
+#profile_img {
+  width: 40%;
+  max-width: 256px;
+  border-radius: 192px;
+  padding: 12px;
+}
+
+/* #profile_img:hover {
+ 
+} */
+
+#about_text {
+  background-color: rgba(0, 0, 0, 0.456);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  /* border: solid 1px whitesmoke; */
+  border-radius: 8px;
+  flex-direction: column;
+
+  align-self: center;
+  text-align: start;
+  min-width: 128px;
+  max-width: 80%;
+  padding: 16px;
+  font-weight: 300;
+}
+
+#about_text::first-letter {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#third_pg {
+  background-color: rgb(0, 128, 128, 0.7);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+}
+
+.carousel_body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carousel_slider {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0.385); */
+}
+
+.carousel_slide {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  margin-top: 32px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 24px;
+  margin: 0;
+  transition: transform 1s;
+  /* resizing issue fixed, calling only transform property now in transition */
+}
+
+.carousel_slide_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+#project_line {
+  border: solid 2px whitesmoke;
+  border-radius: 8px;
+  margin: 4px;
+  height: 75%;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+
+  font-size: 12px;
+  margin: 0;
+  width: 75%;
+  padding: 4px;
+  padding-right: 8px;
+}
+
+#project_title {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+#project_description {
+  text-align: left;
+  font-size: 12px;
+  /* padding-right: 8px; */
+}
+
+#deployment_link {
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+  background-color: #00000093;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  align-self: flex-start;
+  /* make it so on smaller screens... */
+}
+
+.project_num {
+  padding-left: 8px;
+  margin: 0;
+}
+
+#project_num_word {
+  margin: 0;
+  font-size: 12px;
+}
+
+#project_num_int {
+  margin: 0;
+  font-size: 48px;
+}
+
+.carousel_slide img {
+  border-top: solid 4px rgba(0, 0, 0, 0.525);
+  border-bottom: solid 4px rgba(0, 0, 0, 0.525);
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+  transition: filter 1s;
+  @media screen and (max-width: 760px) {
+    object-fit: cover;
+  }
+
+  &:hover {
+    filter: sepia(75%) blur(2px);
+    transition: 1s;
+
+    /* text visibility on? */
+  }
+}
+
+.btn {
+  position: absolute;
+  width: 32px;
+  /* make width 48px on bigger screens w carousel slide info margin at same size */
+  height: 100vh;
+  padding: 12px;
+  border: none;
+  /* border-radius: 50%; */
+  z-index: 12px;
+  cursor: pointer;
+
+  background-color: #00000000;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  transition: all 0.5s;
+  &:hover {
+    color: whitesmoke;
+    background-color: #00000093;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}
+
+.btn:active {
+  /* transform: scale(1.1); */
+}
+
+.btn-prev {
+  /* top: 45%; */
+  left: 0%;
+}
+
+.btn-next {
+  /* top: 45%; */
+  right: 0%;
+}
+
+#fourth_pg {
+  background-color: rgb(255, 192, 203, 0.7);
+}
+
+/* ------ */
+
+/* https://fossheim.io/writing/posts/css-text-gradient/ */
+
+/* https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/ */
+
+/* https://gsap.com/ */
