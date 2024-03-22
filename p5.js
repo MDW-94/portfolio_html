@@ -6,6 +6,8 @@ let particles = [];
 const num = 10000;
 const noiseScale = 0.01;
 
+let isPlaying = true;
+
 function setup() {
   createCanvas(width_main, height_main);
   // initialises particles using for loop
@@ -35,8 +37,7 @@ function positionButton() {
   button.style("border", "none");
 
   button.mousePressed(() => {
-    // code body
-    console.log("button working");
+    isPlaying = !isPlaying;
   });
 }
 
@@ -46,24 +47,26 @@ function windowResized() {
 }
 
 function draw() {
-  background(0, 15); // if we give the background an alpha value we can see previous iterations
+  if(isPlaying){
+    background(0, 15); // if we give the background an alpha value we can see previous iterations
 
-  // this is the for loop that animates everything
-  for (let i = 0; i < num; i++) {
-    // take i++ and put at bottom of function?
-    let p = particles[i];
-    point(p.x, p.y);
-    // if we left the p.x, p.y values the noise would be super grainy - we'd be too zoomed out - noiseScale (0.01) zooms in
-    let n = noise(p.x * noiseScale, p.y * noiseScale);
-    // TAU = PI * 2
-    let a = TAU * n;
-    // Trigonometry, converting an angle to x and y
-    p.x += cos(a); //* speedValue;
-    p.y += sin(a);
-    if (!onScreen(p)) {
-      // if they;re not on screen, give them new random position
-      p.x = random(width);
-      p.y = random(height);
+    // this is the for loop that animates everything
+    for (let i = 0; i < num; i++) {
+      // take i++ and put at bottom of function?
+      let p = particles[i];
+      point(p.x, p.y);
+      // if we left the p.x, p.y values the noise would be super grainy - we'd be too zoomed out - noiseScale (0.01) zooms in
+      let n = noise(p.x * noiseScale, p.y * noiseScale);
+      // TAU = PI * 2
+      let a = TAU * n;
+      // Trigonometry, converting an angle to x and y
+      p.x += cos(a); //* speedValue;
+      p.y += sin(a);
+      if (!onScreen(p)) {
+        // if they;re not on screen, give them new random position
+        p.x = random(width);
+        p.y = random(height);
+      }
     }
   }
 }
