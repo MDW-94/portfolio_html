@@ -615,7 +615,11 @@ h3 {
 }
 
 #fourth_pg {
-  background-color: rgb(255, 192, 203, 0.7);
+  /* background-color: rgb(255, 192, 203, 0.7); */
+  background-image: linear-gradient(
+    rgb(213, 117, 118, 0.7),
+    transparent
+  );
 }
 
 /* ------ */
