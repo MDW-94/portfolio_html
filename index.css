@@ -101,7 +101,7 @@ i {
   );
 }
 
-#navTitle {
+.navTitle {
   color: whitesmoke;
   font-size: 16px;
   margin-right: auto;
@@ -600,10 +600,6 @@ h3 {
   }
 }
 
-.btn:active {
-  /* transform: scale(1.1); */
-}
-
 .btn-prev {
   /* top: 45%; */
   left: 0%;
@@ -615,7 +611,6 @@ h3 {
 }
 
 #fourth_pg {
-  /* background-color: rgb(255, 192, 203, 0.7); */
   background-image: linear-gradient(
     rgb(213, 117, 118, 0.7),
     transparent

@@ -35,7 +35,7 @@
   <body>
     <div id="root">
       <nav id="conditionalNav">
-        <h2 id="navTitle">M. Wasylko</h2>
+        <h2 class="navTitle"><a href="#first_pg">M. Wasylko</a></h2>
         <img
           id="navBurg"
           src="./Images/gray_menu_burg.png"
@@ -122,10 +122,11 @@
               <div class="image_div">
                 <img src="./Images/projects/gis_app.png" alt="a project" />
                 <p class="image_text">
-                  GIS App focusing on the topography of the Shetland Isles<br/><br/>
+                  GIS App focusing on the topography of the Shetland Isles<br /><br />
                   Utilises open-source data from Living Atlas
-                  <br/><br/>
-                  More info - <a href="https://github.com/MDW-94/arcgis_map">README</a>
+                  <br /><br />
+                  More info -
+                  <a href="https://github.com/MDW-94/arcgis_map">README</a>
                 </p>
               </div>
             </div>
@@ -156,8 +157,11 @@
                   An interactive Audio/Visual web synth<br /><br />
                   Final capstone group project - built in React using p5.js and
                   tone.js
-                  <br/><br/>
-                  More info - <a href="https://github.com/MDW-94/DRAMM_Synthesizer">README</a>
+                  <br /><br />
+                  More info -
+                  <a href="https://github.com/MDW-94/DRAMM_Synthesizer"
+                    >README</a
+                  >
                 </p>
               </div>
             </div>
@@ -187,8 +191,11 @@
                   Social Services Management App<br /><br />
                   Group project - full-stack, React and MongoDB application
                   using Express.js and ArcGIS.js
-                  <br/><br/>
-                  More info - <a href="https://github.com/markmcgrory/navigate_app">README</a>
+                  <br /><br />
+                  More info -
+                  <a href="https://github.com/markmcgrory/navigate_app"
+                    >README</a
+                  >
                 </p>
               </div>
             </div>
@@ -208,62 +215,9 @@
       src="p5.js"
     ></script>
 
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        const navElement = document.getElementById("conditionalNav");
-        const observer = new IntersectionObserver((entries) => {
-          const firstSectionOutOfView =
-            entries[0].boundingClientRect.bottom <= 0;
-          if (firstSectionOutOfView) {
-            navElement.style.display = "flex";
-          } else {
-            navElement.style.display = "none";
-          }
-        });
+    <script type="text/javascript" src="conditional_nav.js"></script>
 
-        const firstSection = document.getElementById("first_pg"); // Change this to the ID of your first section
-        observer.observe(firstSection);
-      });
-    </script>
-
-    <script type="text/javascript">
-      const slides = document.querySelectorAll(".carousel_slide");
-
-      slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${index * 100}%)`;
-      });
-
-      const nextSlide = document.querySelector(".btn-next");
-
-      let curSlide = 0;
-
-      let maxSlide = slides.length - 1;
-
-      nextSlide.addEventListener("click", function () {
-        if (curSlide === maxSlide) {
-          curSlide = 0;
-        } else {
-          curSlide++;
-        }
-        slides.forEach((slide, index) => {
-          slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
-        });
-      });
-
-      const prevSlide = document.querySelector(".btn-prev");
-
-      prevSlide.addEventListener("click", function () {
-        if (curSlide == 0) {
-          curSlide == maxSlide;
-        } else {
-          curSlide--;
-        }
-
-        slides.forEach((slide, index) => {
-          slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
-        });
-      });
-    </script>
+    <script type="text/javascript" src="carousel_script.js"></script>
   </body>
 </html>
 
