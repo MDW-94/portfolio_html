@@ -644,7 +644,7 @@ h3 {
   background: rgba(0, 0, 0, 0.456);
 }
 
-.contact_form {
+.contact_form_style {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -657,7 +657,7 @@ h3 {
   letter-spacing: 2px;
 }
 
-.contact_form label {
+.contact_form_style label {
   font-weight: 700;
   /* color: rgb(234, 124, 142); */
   color: whitesmoke;
@@ -665,12 +665,12 @@ h3 {
   margin-bottom: 4px;
 }
 
-.contact_form input::placeholder {
+.contact_form_style input::placeholder {
   color: rgba(225, 225, 225, 0.9);
   letter-spacing: 1px;
 }
 
-.contact_form textarea::placeholder {
+.contact_form_style textarea::placeholder {
   color: rgba(225, 225, 225, 0.9);
   letter-spacing: 1px;
 }
