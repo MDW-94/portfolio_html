@@ -12,7 +12,7 @@
     <li>toggle side menu</li>
 </ul>
 
-- include description for each of these features and how they were implemented - separate READMEs?
+include description for each of these features and how they were implemented - separate READMEs
 
 ### Resource
 
