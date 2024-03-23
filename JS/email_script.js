@@ -7,8 +7,8 @@
 
 // Getting elements
 const form = document.getElementById("contact__form");
-const userName = document.getElementById("user_name");
-const userEmail = document.getElementById("user_email");
+const toName = document.getElementById("user_name");
+const fromName = document.getElementById("user_email");
 const userMessage = document.getElementById("user_message");
 const messageContainer = document.querySelector(".message_container");
 const message = document.getElementById("message");
@@ -23,12 +23,17 @@ function validateForm() {
     message.textContent = "Please fill out all fields";
     message.style.color = "red";
     message.style.visibility = "visible";
-    messageContainer.style.borderColor = "red";
+    message.style.border = "solid 4px red";
+    message.style.height = "32px";
+    messageContainer.style.height = "32px";
   } else if (isValid === true) {
     message.textContent = "Your message is being sent";
     message.style.color = "orange";
     message.style.visibility = "visible";
-    messageContainer.style.borderColor = "orange";
+    message.style.border = "solid 4px orange";
+    message.style.height = "32px";
+    messageContainer.style.height = "32px";
+
   }
 }
 
@@ -36,8 +41,8 @@ function processFormData(e) {
   e.preventDefault();
 
   const templateParams = {
-    name: userName.value,
-    email: userEmail.value,
+    name: toName.value,
+    email: fromName.value,
     message: userMessage.value,
   };
 
@@ -50,11 +55,12 @@ function processFormData(e) {
   if (isValid === true) {
     emailjs.send("service_0i7d7iq", "template_801bg98", templateParams).then(
       function (response) {
-        message.textContent =
-          "Thank you, I will reply as soon as possible";
+        message.textContent = "Thank you, I will reply as soon as possible";
         message.style.color = "whitesmoke";
-        messageContainer.style.borderColor = "green";
+        message.style.border = "solid 4px rgb(63, 195, 128)";
         message.style.visibility = "visible";
+        message.style.height = "40px";
+        messageContainer.style.height = "40px";
         console.log("Success", response.status, response.text);
       },
       function (error) {
@@ -69,8 +75,6 @@ form.addEventListener("submit", function (event) {
   processFormData(event);
   // console.log(processFormData.templateParams);
 });
-
-
 
 // https://medium.com/@remcojonk/contact-form-withvanilla-javascript-and-emailjs-cdad241736df#:~:text=Creating%20the%20contact%20form&text=We'll%20start%20by%20creating,message%2C%20and%20a%20submit%20button.
 
