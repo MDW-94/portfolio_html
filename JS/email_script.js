@@ -45,20 +45,20 @@ function processFormData(e) {
   console.log("processFormData() :::", templateParams);
 
   // Sending the form data
-  // if (isValid === true) {
-  //   emailjs.send("service_0i7d7iq", "template_801bg98", templateParams).then(
-  //     function (response) {
-  //       message.textContent =
-  //         "Thank you very much, I will reply to you as soon as possible";
-  //       message.style.color = "green";
-  //       messageContainer.style.borderColor = "green";
-  //       console.log("Success", response.status, response.text);
-  //     },
-  //     function (error) {
-  //       console.log("Failed", error);
-  //     }
-  //   );
-  // }
+  if (isValid === true) {
+    emailjs.send("service_0i7d7iq", "template_801bg98", templateParams).then(
+      function (response) {
+        message.textContent =
+          "Thank you very much, I will reply to you as soon as possible";
+        message.style.color = "green";
+        messageContainer.style.borderColor = "green";
+        console.log("Success", response.status, response.text);
+      },
+      function (error) {
+        console.log("Failed", error);
+      }
+    );
+  }
 }
 
 form.addEventListener("submit", function (event) {
