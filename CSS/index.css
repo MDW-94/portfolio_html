@@ -664,11 +664,25 @@ h3 {
   margin-bottom: -8px;
 }
 
+.contact_form input::placeholder {
+  color: whitesmoke;
+}
+
+.contact_form textarea::placeholder {
+  color: whitesmoke;
+}
+
 #user_name,
 #user_email,
 #user_message {
   margin-top: 0;
   width: 100%;
+
+  background-color: rgba(245, 245, 245, 0.435);
+  color: whitesmoke;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
 }
 
 #user_name,
