@@ -40,21 +40,21 @@
       });
 
 
-      const container = document.getElementById('container');
+//       const container = document.getElementById('container');
 
-container.addEventListener('scroll', () => {
-    const scrollPosition = container.scrollTop + container.clientHeight / 2;
-    const sections = document.querySelectorAll('section');
+// container.addEventListener('scroll', () => {
+//     const scrollPosition = container.scrollTop + container.clientHeight / 2;
+//     const sections = document.querySelectorAll('section');
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
+//     sections.forEach(section => {
+//         const sectionTop = section.offsetTop;
+//         const sectionBottom = sectionTop + section.offsetHeight;
         
-        if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
-            container.scrollTo({
-                top: sectionTop - container.clientHeight / 2,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+//         if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+//             container.scrollTo({
+//                 top: sectionTop - container.clientHeight / 2,
+//                 behavior: 'smooth'
+//             });
+//         }
+//     });
+// });
