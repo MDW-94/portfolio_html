@@ -248,11 +248,11 @@
         </div>
       </section>
       <section id="fourth_pg">
-        <section class="contact_container">
+        <div class="contact_container">
           <form class="contact_form">
             <!-- Name -->
             <label>Name</label>
-            <br/>
+            <br />
             <input
               type="text"
               id="user_name"
@@ -261,10 +261,10 @@
               required
               minlength="3"
             />
-            <br/>
+            <br />
             <!-- Email -->
             <label>Email</label>
-            <br/>
+            <br />
             <input
               type="email"
               id="user_email"
@@ -272,22 +272,27 @@
               placeholder="email@address.com"
               required
             />
-            <br/>
+            <br />
             <!-- Message -->
             <label>Message</label>
-            <br/>
-            <textarea name="message" id="user_message" required
-            placeholder="Your message..." minlength="10"></textarea>
-            <br/>
+            <br />
+            <textarea
+              name="message"
+              id="user_message"
+              required
+              placeholder="Your message..."
+              minlength="10"
+            ></textarea>
+            <br />
             <!-- Submit -->
             <button type="submit" value="Send">Send</button>
-            <br/>
+            <br />
             <!-- Error / Success -->
             <div class="message-container">
               <!-- <h3 id="message">Some message</h3> -->
             </div>
           </form>
-        </section>
+        </div>
       </section>
     </div>
 

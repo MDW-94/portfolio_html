@@ -622,6 +622,7 @@ h3 {
 }
 
 .contact_container {
+  position: relative;
   margin: 0;
   padding: 4px;
   padding-top: 8px;
@@ -644,6 +645,7 @@ h3 {
 }
 
 .contact_form {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -680,6 +682,8 @@ h3 {
 #user_message {
   max-width: 82.75%;
   height: 256px;
+  padding: 2px;
+  border-radius: 4px;
 }
 
 /* ------ */
