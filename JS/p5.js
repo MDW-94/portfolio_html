@@ -30,9 +30,13 @@ function positionButton() {
   let width_main = window.innerWidth + 100;
   button.position(width_main / 2 - 90, (height_main / 10) * 8.3125);
 
-  let col_black = color(0, 0, 0, 0.4);
+  let col_black = "rgba(0, 0, 0, 0.450)";
   let col_white = color(245, 245, 245);
+  let border_radius = "4px";
+  let button_padding = "6px";
   button.style("background-color", col_black);
+  button.style("border-radius", border_radius);
+  button.style("padding", button_padding);
   button.style("color", col_white);
   button.style("border", "none");
 
