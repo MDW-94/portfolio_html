@@ -118,7 +118,6 @@ i {
 }
 
 #side_menu {
-  /* z-index: 1; */
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -129,8 +128,6 @@ i {
   backdrop-filter: blur(12px);
   height: 90vh;
   width: 100%;
-
-  /* transition?  =might need to add an entry animation by chaning display none to something else try visibility: hidden and animate*/
 }
 
 #made_in,
@@ -172,8 +169,8 @@ section {
   height: 100vh;
   max-width: 100%;
   max-height: 100vh;
-  margin-top: 4.5vh;
-  margin-bottom: 5.5vh;
+  /* margin-top: 4.5vh;
+  margin-bottom: 5.5vh; */
 
   display: flex;
   flex-direction: column;
@@ -191,13 +188,6 @@ section {
 }
 
 #first_pg {
-  /* black hole sun */
-  /* background-image: radial-gradient(
-    rgb(0, 0, 0) 2.5%,
-    rgba(0, 0, 0, 0.101) 60%,
-    rgba(0, 0, 0, 0.023)
-  );
-  border-radius: 480px; */
 
   width: 100vw;
   margin-top: 128px;

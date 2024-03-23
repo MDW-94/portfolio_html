@@ -7,8 +7,8 @@
 
 // Getting elements
 const form = document.getElementById("contact__form");
-const toName = document.getElementById("user_name");
-const fromName = document.getElementById("user_email");
+const userName = document.getElementById("user_name");
+const fromEmail = document.getElementById("user_email");
 const userMessage = document.getElementById("user_message");
 const messageContainer = document.querySelector(".message_container");
 const message = document.getElementById("message");
@@ -33,17 +33,20 @@ function validateForm() {
     message.style.border = "solid 4px orange";
     message.style.height = "32px";
     messageContainer.style.height = "32px";
-
   }
 }
 
 function processFormData(e) {
   e.preventDefault();
 
+  const to_name = userName.value;
+  const fromEmailValue = fromEmail.value;
+
   const templateParams = {
-    name: toName.value,
-    email: fromName.value,
-    message: userMessage.value,
+    to_name: "Matthew",
+    from_name: to_name, // this one works
+    from_email: fromEmailValue,
+    message: userMessage.value, // this one works
   };
 
   // validating form
