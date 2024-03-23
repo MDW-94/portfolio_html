@@ -169,8 +169,8 @@ section {
   height: 100vh;
   max-width: 100%;
   max-height: 100vh;
-  margin-top: 4.5vh;
-  margin-bottom: 5.5vh;
+  /* margin-top: 4.5vh;
+  margin-bottom: 5.5vh; */
 
   display: flex;
   flex-direction: column;
