@@ -658,18 +658,21 @@ h3 {
 }
 
 .contact_form label {
-  font-weight: 600;
-  color: rgb(234, 124, 142);
+  font-weight: 700;
+  /* color: rgb(234, 124, 142); */
+  color: whitesmoke;
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
 .contact_form input::placeholder {
-  color: whitesmoke;
+  color: rgba(225, 225, 225, 0.9);
+  letter-spacing: 1px;
 }
 
 .contact_form textarea::placeholder {
-  color: whitesmoke;
+  color: rgba(225, 225, 225, 0.9);
+  letter-spacing: 1px;
 }
 
 #user_name,
