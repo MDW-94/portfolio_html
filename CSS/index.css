@@ -621,6 +621,40 @@ h3 {
   box-shadow: 0 0 16px 16px rgba(0, 0, 0, 0.25) inset;
 }
 
+.contact {
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+  box-sizing: inherit;
+
+  font-size: 16px;
+  max-height: 50vh;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.456);
+}
+
+.contact_form {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+}
+
+.contact_form label input {
+  width: 100%;
+}
+
+
+
 /* ------ */
 
 /* https://fossheim.io/writing/posts/css-text-gradient/ */

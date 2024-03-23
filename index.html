@@ -71,10 +71,18 @@
           <i id="sub_title">Software Developer</i>
         </div>
         <div class="social_icons">
-          <a href="https://www.linkedin.com/in/matthew-wasylko-75614b224/"><img id="icon_ln" src="./Images/logo20.png" /></a>
-          <a href="mailto:matthew.wasylko@gmail.com"><img id="icon_email" src="./Images/logo18.png" /></a>
-          <a href="Images/matthew_wasylko_resume.pdf" download><img id="icon_cv" src="./Images/logo17.png" /></a>
-          <a href="https://github.com/MDW-94"><img id="icon_gh" src="./Images/logo21.png" /></a>
+          <a href="https://www.linkedin.com/in/matthew-wasylko-75614b224/"
+            ><img id="icon_ln" src="./Images/logo20.png"
+          /></a>
+          <a href="mailto:matthew.wasylko@gmail.com"
+            ><img id="icon_email" src="./Images/logo18.png"
+          /></a>
+          <a href="Images/matthew_wasylko_resume.pdf" download
+            ><img id="icon_cv" src="./Images/logo17.png"
+          /></a>
+          <a href="https://github.com/MDW-94"
+            ><img id="icon_gh" src="./Images/logo21.png"
+          /></a>
         </div>
       </section>
       <section id="second_pg">
@@ -155,8 +163,8 @@
                 <img src="./Images/projects/synth_app.png" alt="a project" />
                 <p class="image_text">
                   An interactive Audio/Visual web synth<br /><br />
-                  Final capstone group project - Full-Stack React & Spring.io app using p5.js and
-                  tone.js libraries
+                  Final capstone group project - Full-Stack React & Spring.io
+                  app using p5.js and tone.js libraries
                   <br /><br />
                   More info -
                   <a href="https://github.com/MDW-94/DRAMM_Synthesizer"
@@ -224,9 +232,10 @@
                 <p class="image_text">
                   Veterinary Services Management App<br /><br />
                   Solo project - Full-Stack, Flask and PostgresSQL
-                  <br /><br/>
+                  <br /><br />
                   More info -
-                  <a href="https://github.com/MDW-94/G38_SoloProject_PetCareConsole"
+                  <a
+                    href="https://github.com/MDW-94/G38_SoloProject_PetCareConsole"
                     >README</a
                   >
                 </p>
@@ -239,7 +248,39 @@
         </div>
       </section>
       <section id="fourth_pg">
-        <p>Fourth page - "Contact"</p>
+        <section class="contact">
+          <form id="contact_form">
+            <!-- Name -->
+            <label>Name</label>
+            <input
+              type="text"
+              id="user_name"
+              name="user_name"
+              placeholder="name..."
+              required
+              minlength="3"
+            />
+            <!-- Email -->
+            <label>Email</label>
+            <input
+              type="email"
+              id="user_email"
+              name="user_email"
+              placeholder="email@address.com"
+              required
+            />
+            <!-- Message -->
+            <label>Message</label>
+            <textarea name="message" id="user_message" required
+            placeholder="Your message..." minlength="10"></textarea>
+            <!-- Submit -->
+            <button type="submit" value="Send">Send</button>
+            <!-- Error / Success -->
+            <div class="message-container">
+              <h3 id="message">Some message</h3>
+            </div>
+          </form>
+        </section>
       </section>
     </div>
 
@@ -251,6 +292,8 @@
     <script type="text/javascript" src="./JS/conditional_nav.js"></script>
 
     <script type="text/javascript" src="./JS/carousel_script.js"></script>
+
+    <script type="text/javascript" src="./JS/email_script.js"></script>
   </body>
 </html>
 
