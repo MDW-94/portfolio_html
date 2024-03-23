@@ -625,13 +625,14 @@ h3 {
   margin: 0;
   padding: 8px;
   border-radius: 8px;
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
 
   font-size: 16px;
   max-height: 50vh;
-  width: 50%;
+  /* width: 50%; */
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -642,18 +643,17 @@ h3 {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  word-break: break-all;
+  display: block;
+  /* flex-direction: column;
+  justify-content: center; */
+  /* align-items: center; */
   gap: 12px;
-
 }
 
 .contact_form label input {
-  width: 100%;
+  /* width: 100%; */
 }
-
-
 
 /* ------ */
 
