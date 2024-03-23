@@ -22,10 +22,12 @@ function validateForm() {
   if (isValid === false) {
     message.textContent = "Please fill out all fields";
     message.style.color = "red";
+    message.style.visibility = "visible";
     messageContainer.style.borderColor = "red";
   } else if (isValid === true) {
     message.textContent = "Your message is being sent";
     message.style.color = "orange";
+    message.style.visibility = "visible";
     messageContainer.style.borderColor = "orange";
   }
 }
@@ -42,16 +44,17 @@ function processFormData(e) {
   // validating form
   validateForm();
 
-  console.log("processFormData() :::", templateParams);
+  console.log("processFormData ->", templateParams);
 
   // Sending the form data
   if (isValid === true) {
     emailjs.send("service_0i7d7iq", "template_801bg98", templateParams).then(
       function (response) {
         message.textContent =
-          "Thank you very much, I will reply to you as soon as possible";
-        message.style.color = "green";
+          "Thank you, I will reply as soon as possible";
+        message.style.color = "whitesmoke";
         messageContainer.style.borderColor = "green";
+        message.style.visibility = "visible";
         console.log("Success", response.status, response.text);
       },
       function (error) {
@@ -67,6 +70,8 @@ form.addEventListener("submit", function (event) {
   // console.log(processFormData.templateParams);
 });
 
-// Getting elements
+
+
+// https://medium.com/@remcojonk/contact-form-withvanilla-javascript-and-emailjs-cdad241736df#:~:text=Creating%20the%20contact%20form&text=We'll%20start%20by%20creating,message%2C%20and%20a%20submit%20button.
 
 //   https://vizionconcept.hashnode.dev/how-to-create-a-contact-form-with-email-js-using-vanilla-javascript-with-validation
