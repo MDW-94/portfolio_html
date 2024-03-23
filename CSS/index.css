@@ -659,9 +659,9 @@ h3 {
 
 .contact_form label {
   font-weight: 600;
-  color: pink;
+  color: rgb(234, 124, 142);
   margin-top: 4px;
-  margin-bottom: -8px;
+  margin-bottom: 4px;
 }
 
 .contact_form input::placeholder {
