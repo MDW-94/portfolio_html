@@ -49,6 +49,7 @@ html {
   position: absolute;
   overflow: scroll;
   scroll-behavior: smooth;
+  transition: scroll 1.5s ease;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
 }
