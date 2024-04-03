@@ -2,11 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const navElement = document.getElementById("conditionalNav");
     const observer = new IntersectionObserver((entries) => {
       const firstSectionOutOfView =
-        entries[0].boundingClientRect.bottom <= 0;
+        entries[0].boundingClientRect.bottom <= 1;
       if (firstSectionOutOfView) {
-        navElement.style.display = "flex";
+        // navElement.style.display = "flex";
+        navElement.style.top = "0px";
       } else {
-        navElement.style.display = "none";
+        navElement.style.top = "-40px"
+        // navElement.style.display = "none";
       }
     });
 
