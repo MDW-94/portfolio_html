@@ -56,9 +56,9 @@ html {
 #p5_sketch {
   overflow: hidden;
   scroll-snap-type: none;
-  position: absolute; 
-  margin: 0; 
-  padding: 0
+  position: absolute;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -84,11 +84,11 @@ i {
 
 #conditionalNav {
   transition-delay: 0ms;
-  transition: top 0.5s ease;
+  transition: top 0.45s ease;
   z-index: 1;
   padding: 4px;
   position: fixed;
-  top: 0px;
+  top: -40px;
   /* display: none; BRING BACK IF PROBLEMS ON MOBILE PLATFORM*/
   display: flex;
   justify-content: space-evenly;
