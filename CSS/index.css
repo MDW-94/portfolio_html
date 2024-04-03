@@ -33,17 +33,10 @@ body,
 
 body,
 html {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /* background-color: whitesmoke; */
-  /* 
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important; */
-
+  align-items: center; */
   background: black;
 }
 
@@ -188,7 +181,6 @@ section {
 }
 
 #first_pg {
-
   width: 100vw;
   gap: 16px;
   justify-content: center;
