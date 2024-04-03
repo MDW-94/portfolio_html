@@ -367,8 +367,11 @@ h3 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
   gap: 4px;
+  padding: 4px; 
+  /* Make au niform padding border for all elements in the portfolio */
 }
 
 #about_titles {
