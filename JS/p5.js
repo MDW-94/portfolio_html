@@ -26,9 +26,9 @@ function setup() {
 }
 
 function positionButton() {
-  let height_main = window.innerHeight + 100;
-  let width_main = window.innerWidth + 100;
-  button.position(width_main / 2 - 90, (height_main / 10) * 8.3125);
+  let height_main = window.innerHeight + 2;
+  let width_main = window.innerWidth + 2;
+  button.position(width_main / 2 - 40, (height_main / 10) * 9.375);
 
   let col_black = "rgba(0, 0, 0, 0.5)";
   let col_white = color(245, 245, 245);

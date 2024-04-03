@@ -34,7 +34,7 @@
         link.addEventListener('click', function (e) {
           e.preventDefault();
           const target = this.getAttribute('href');
-          const duration = 2000; // Adjust as needed
+          const duration = 50000; // Adjust as needed
           smoothScroll(target, duration);
         });
       });

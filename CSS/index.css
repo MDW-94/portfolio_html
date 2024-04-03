@@ -49,8 +49,17 @@ html {
   position: absolute;
   overflow: scroll;
   scroll-behavior: smooth;
+  transition: scroll 1.5s ease;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+}
+
+#p5_sketch {
+  overflow: hidden;
+  scroll-snap-type: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -76,12 +85,12 @@ i {
 
 #conditionalNav {
   transition-delay: 0ms;
-  transition: top 0.5s ease;
+  transition: top 0.45s ease;
   z-index: 1;
   padding: 4px;
   position: fixed;
-  top: 0px;
-  /* display: none; BRING BACK IF PROBLEMS ON MOBILE PLATFORM*/ 
+  top: -40px;
+  /* display: none; BRING BACK IF PROBLEMS ON MOBILE PLATFORM*/
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -94,7 +103,6 @@ i {
     transparent 0px,
     transparent 4px
   );
-
 }
 
 .navTitle {
@@ -342,32 +350,47 @@ a {
 #about_line {
   min-height: 30%;
   max-height: 75%;
+  max-width: 0px;
   margin: 0;
   color: whitesmoke;
   border: solid 2px whitesmoke;
   border-radius: 8px;
 }
 
-h3 {
-  font-size: 24px;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 8px;
-}
-
 .header_profile {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
   gap: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 960px;
+  /* Make a uniform padding border for all elements in the portfolio */
+  /* 280/100 =>  16/2.8 = 5.71% | this is 16px in relatino to a 280 width*/
+  padding-left: 5.71%;
+  padding-right: 5.71%;
+}
+
+#about_titles,
+#profile_img,
+#about_line {
+  /* flex: 0.5; */
 }
 
 #about_titles {
   padding: 16px;
-  padding-top: 12px;
   word-wrap: break-word;
   width: 10em;
+}
+
+#about_titles h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 8px;
+  @media screen and (max-width: 300px) {
+    font-size: 16px;
+  }
 }
 
 #profile_img {
@@ -381,25 +404,37 @@ h3 {
  
 } */
 
+#about_text_container {
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+  padding-left: 5.71%;
+  padding-right: 5.71%;
+}
+
 #about_text {
   background-color: rgba(0, 0, 0, 0.456);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  /* border: solid 1px whitesmoke; */
   border-radius: 8px;
   flex-direction: column;
 
   align-self: center;
-  text-align: start;
-  min-width: 128px;
-  max-width: 80%;
-  padding: 16px;
+  text-align: center;
+
+  box-sizing: border-box;
+  /* min-width: 160px; */
+  width: 100%;
+  padding: 12px;
   font-weight: 300;
 }
 
 #about_text::first-letter {
   font-size: 24px;
   font-weight: 500;
+  @media screen and (max-width: 760px) {
+    font-size: 16px;
+  }
 }
 
 #third_pg {
@@ -522,7 +557,8 @@ h3 {
   border-top: solid 4px rgba(0, 0, 0, 0.725);
   border-bottom: solid 4px rgba(0, 0, 0, 0.725);
   width: 100%;
-  height: 375px;
+  max-height: 375px;
+  min-height: 45%;
   object-fit: cover;
   box-shadow: 0 0 16px 16px rgba(0, 0, 0, 0.25) inset;
 
@@ -543,10 +579,9 @@ h3 {
 }
 
 .carousel_slide img {
-  width: 100%;
   object-fit: cover;
   width: 100%;
-  height: 375px;
+  height: 100%;
   object-fit: cover;
 
   @media screen and (max-width: 760px) {
@@ -561,7 +596,9 @@ h3 {
 .image_text {
   position: absolute;
   max-width: 85%;
-  top: 50%;
+  max-height: 75%;
+  margin: 0;
+  top: 45%;
   left: 25%;
   right: 25%;
   visibility: hidden;
