@@ -356,29 +356,35 @@ a {
   border-radius: 8px;
 }
 
-h3 {
-  font-size: 24px;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 8px;
-}
 
 .header_profile {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  width: 100%;
+  /* width: 100%; */
   gap: 4px;
-  padding: 4px; 
-  /* Make au niform padding border for all elements in the portfolio */
+  box-sizing: border-box;
+  /* min-width: 160px; */
+  width: 100%;
+  padding: 16px;
+  /* Make a uniform padding border for all elements in the portfolio */
 }
 
 #about_titles {
   padding: 16px;
-  padding-top: 12px;
   word-wrap: break-word;
   width: 10em;
+}
+
+#about_titles h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 8px;
+  @media screen and (max-width: 300px) {
+    font-size: 16px;
+  }
 }
 
 #profile_img {
@@ -392,6 +398,12 @@ h3 {
  
 } */
 
+#about_text_container{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
 #about_text {
   background-color: rgba(0, 0, 0, 0.456);
   -webkit-backdrop-filter: blur(12px);
@@ -402,15 +414,20 @@ h3 {
 
   align-self: center;
   text-align: start;
-  min-width: 128px;
-  max-width: 80%;
-  padding: 16px;
+
+  box-sizing: border-box;
+  /* min-width: 160px; */
+  width: 100%;
+  padding: 12px;
   font-weight: 300;
 }
 
 #about_text::first-letter {
   font-size: 24px;
   font-weight: 500;
+  @media screen and (max-width: 760px) {
+    font-size: 16px;
+  }
 }
 
 #third_pg {
