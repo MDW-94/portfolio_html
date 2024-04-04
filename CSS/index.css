@@ -57,7 +57,7 @@ html {
 #p5_sketch {
   overflow: hidden;
   scroll-snap-type: none;
-  position: absolute;
+  position: fixed;
   margin: 0;
   padding: 0;
 }
@@ -166,37 +166,31 @@ i {
 /* --------------- */
 
 section {
+  /* scroll-margin-top: 34px; */
   z-index: 2;
   padding: 0;
   margin: 0;
   overflow: hidden;
   height: 100vh;
-  max-width: 100%;
+  width: 100vw;
   max-height: 100vh;
-  margin-top: 0.5vh;
-  margin-bottom: 0.5vh;
-
+  margin-top: 0.1vh;
+  margin-bottom: 0.1vh;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
   text-align: center;
-
   scroll-snap-align: center;
-
   box-sizing: border-box;
-  /* border: 2px solid black; */
   border-radius: 8px;
   color: whitesmoke;
 }
 
 #first_pg {
-  width: 100vw;
   gap: 16px;
   justify-content: center;
   align-items: center;
-
   color: rgb(234, 234, 234);
 }
 

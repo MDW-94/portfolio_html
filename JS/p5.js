@@ -39,6 +39,7 @@ function positionButton() {
   button.style("padding", button_padding);
   button.style("color", col_white);
   button.style("border", "none");
+  button.style("position", "fixed");
 
   button.mousePressed(() => {
     isPlaying = !isPlaying;
