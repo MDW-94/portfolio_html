@@ -57,7 +57,7 @@ html {
 #p5_sketch {
   overflow: hidden;
   scroll-snap-type: none;
-  position: absolute;
+  position: fixed;
   margin: 0;
   padding: 0;
 }
