@@ -493,6 +493,8 @@ a {
   margin-right: 32px;
 }
 
+
+
 #project_line {
   border: solid 2px whitesmoke;
   border-radius: 8px;
@@ -512,7 +514,6 @@ a {
   width: 78%;
   padding: 4px;
   padding-right: 8px;
-  margin-top: 4px;
 }
 
 #project_title {
@@ -617,17 +618,15 @@ a {
 .btn {
   position: absolute;
   width: 32px;
-  /* make width 48px on bigger screens w carousel slide info margin at same size */
   height: 100vh;
-  padding: 12px;
   border: none;
-  /* border-radius: 50%; */
   z-index: 12px;
   cursor: pointer;
 
   background-color: #00000000;
   color: rgb(0, 0, 0);
-  font-size: 24px;
+  text-align: center;
+  font-size: 32px;
   transition: all 0.5s;
   &:hover {
     color: whitesmoke;
